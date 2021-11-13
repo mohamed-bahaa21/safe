@@ -1,0 +1,32 @@
+<% layout('layouts/boilerplate')%>
+<section class="update">
+    <h3 class="text-center">Update Password</h3>
+    
+    <form  action="/mysafe/<%= safe._id%>/<%= password._id %>?_method=PUT" method="post">
+
+            <div class="form">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input maxlength="15" class="form-control" type="text" id="title" name="password[title] " value="<%= password.title %> " required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="url">Url</label>
+                    <input class="form-control" type="url" id="url" name="password[url]" required value="<%= password.url %> ">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="password">Password</label>
+                    <input class="form-control" type="password" id="password" name="password[password]" required value="<%= password.password %> ">
+                    
+                </div>
+    
+                
+                <div class="mb-3">
+                    <button class="btn btn-success">Update Password</button>
+                </div>
+            </div>
+            
+            
+        </form>
+        <a href="/mysafe/<%= safe._id%>">All Passwords</a>
+
+    </section>

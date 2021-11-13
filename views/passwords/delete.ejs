@@ -1,0 +1,18 @@
+<% layout('layouts/boilerplate')%>
+
+<section class="delete">
+    
+    <div>
+        <h4>Are you sure you want to delete this password?</h4>
+        <div class="buttons">
+            <a class="btn btn-primary" href="/mysafe/<%= safe._id%>" role="button">No</a>
+        <form action="/mysafe/<%= safe._id%>/<%= password._id %>?_method=DELETE" method="post">
+            <button  class="btn btn-danger">Yes</button>
+        </form>   
+        
+        </div>
+        
+    </div>
+    
+    
+</section>

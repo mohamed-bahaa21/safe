@@ -1,0 +1,18 @@
+<% layout('layouts/boilerplate')%>
+
+<section class="delete">
+    
+    <div>
+        <h4>Hey would you like to make a new safe?</h4>
+        <div class="buttons">
+            <a class="btn btn-primary" href="/myacc/<%= safe._id%>" role="button">No</a>
+        <form action="/mysafe" method="post">
+            <button  class="btn btn-danger">Yes</button>
+        </form>   
+        
+        </div>
+        
+    </div>
+    
+    
+</section>
